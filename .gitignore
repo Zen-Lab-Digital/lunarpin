@@ -21,11 +21,10 @@
 !/js/
 !/js/**
 
-!/tests/
-!/tests/**
-
-!/docs/
-!/docs/deployment-guide.md
-
 !/app-debug/
 !/app-debug/app-debug.apk
+
+# docs/ y tests/ deliberadamente fuera del repo público: no son necesarias para
+# que la landing zone funcione (documentación y suite de pruebas de desarrollo,
+# no consumidas en runtime por el sitio) y reducen la superficie de información
+# expuesta públicamente. Siguen existiendo en local / OneDrive.
