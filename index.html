@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lunar Pin - El pulso del cosmos en tu pantalla de inicio. Widget astronómico elegante, preciso y 100% privado para Android.">
+  <meta name="author" content="Zenlab Digital">
+  <meta name="theme-color" content="#07090e">
+  <link rel="canonical" href="https://zen-lab-digital.github.io/lunarpin/">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zen-lab-digital.github.io/lunarpin/">
+  <meta property="og:title" content="Lunar Pin — Calendario y Widget Lunar Astronómico">
+  <meta property="og:description" content="Conoce la fase lunar en tiempo real, iluminación exacta, edad y signo zodiacal con un widget minimalista para Android. 100% offline y privado.">
+  <meta property="og:image" content="Screenshot_20260908_193459_LunarPin.jpg">
+
+  <title>Lunar Pin — Calendario y Widget Lunar Astronómico</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="space-theme">
+  <!-- Fondo de estrellas dinámicas -->
+  <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
+
+  <!-- Navegación superior -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Lunar Pin Inicio">
+        <span class="brand-moon-icon" id="navMoonIcon">🌕</span>
+        <span class="brand-name">Lunar <strong>Pin</strong></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link">Fase Lunar</a>
+        <a href="#showcase" class="nav-link">La App</a>
+        <a href="#features" class="nav-link">Características</a>
+        <a href="privacy.html" class="nav-link">Privacidad</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#download" class="btn btn-sm btn-primary">Descargar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Hero -->
+    <section class="hero-section" id="hero">
+      <div class="hero-glow-orb" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span>Widget para Android · 100% Offline</span>
+          </div>
+
+          <h1 class="hero-title">
+            El pulso del <span class="gradient-text">cosmos</span> en tu pantalla de inicio
+          </h1>
+
+          <p class="hero-subtitle">
+            Lunar Pin sincroniza tu ritmo diario con el ciclo lunar. Descubre la iluminación exacta, edad y signo zodiacal de la Luna con diseño OLED oscuro, widgets en tiempo real y privacidad absoluta.
+          </p>
+
+          <div class="hero-actions" id="download">
+            <a href="https://play.google.com/store/apps/details?id=com.zenlabdigital.lunarpin" target="_blank" rel="noopener noreferrer" class="btn btn-google-play" id="googlePlayCta">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186A2.217 2.217 0 0 1 3 20.615V3.385c0-.606.223-1.162.609-1.571zm11.602 11.602l2.361 2.361-12.78 7.373 10.419-9.734zm0-2.832L4.792 2.651l12.78 7.373-2.361 2.36zM18.89 10.98l2.946 1.701a1.218 1.218 0 0 1 0 2.11l-2.946 1.7-2.078-2.077 2.078-2.034z"/>
+              </svg>
+              <div class="btn-text">
+                <span class="btn-caption">Disponible en</span>
+                <span class="btn-headline">Google Play</span>
+              </div>
+            </a>
+
+            <a href="app-debug/app-debug.apk" download class="btn btn-secondary" id="apkDownloadCta">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Descargar APK Directo</span>
+            </a>
+          </div>
+
+          <div class="hero-meta-points">
+            <div class="meta-point">
+              <span class="check-icon">✓</span>
+              <span>Cero Telemetría</span>
+            </div>
+            <div class="meta-point">
+              <span class="check-icon">✓</span>
+              <span>Sin Publicidad</span>
+            </div>
+            <div class="meta-point">
+              <span class="check-icon">✓</span>
+              <span>Cálculo Astronómico Local</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visualizador interactivo de Luna en Hero -->
+        <div class="hero-lunar-display">
+          <div class="lunar-card glass-panel" id="lunarWidgetCard">
+            <div class="lunar-header">
+              <span class="lunar-tag" id="lunarTagDate">Hoy en tu cielo</span>
+              <span class="lunar-zodiac-badge" id="lunarZodiacBadge">♈ Aries</span>
+            </div>
+
+            <div class="lunar-orb-container">
+              <div class="lunar-glow" id="lunarGlow"></div>
+              <div class="lunar-sphere" id="lunarSphere" aria-label="Visualización de la Luna">
+                <div class="lunar-shadow" id="lunarShadow"></div>
+                <div class="lunar-texture" id="lunarTexture"></div>
+              </div>
+            </div>
+
+            <div class="lunar-info-grid">
+              <div class="lunar-info-item">
+                <span class="info-label">Fase Actual</span>
+                <strong class="info-value" id="lunarPhaseName">Cargando...</strong>
+              </div>
+              <div class="lunar-info-item">
+                <span class="info-label">Iluminación</span>
+                <strong class="info-value" id="lunarIllumination">--%</strong>
+              </div>
+              <div class="lunar-info-item">
+                <span class="info-label">Edad Lunar</span>
+                <strong class="info-value" id="lunarAge">-- días</strong>
+              </div>
+              <div class="lunar-info-item">
+                <span class="info-label">Signo Lunar</span>
+                <strong class="info-value" id="lunarZodiac">--</strong>
+              </div>
+              <div class="lunar-info-item lunar-info-item--wide">
+                <span class="info-label">🌍 Distancia a la Tierra</span>
+                <strong class="info-value" id="lunarDistance">-- km</strong>
+              </div>
+            </div>
+
+            <div class="lunar-date-picker-wrap">
+              <label for="lunarDateInput" class="date-picker-label">Explorar otra fecha:</label>
+              <div class="date-input-group">
+                <input type="date" id="lunarDateInput" class="input-date">
+                <button type="button" id="btnToday" class="btn btn-xs btn-outline">Hoy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Showcase con Capturas Reales -->
+    <section class="showcase-section" id="showcase">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="subheading">Diseño Puro & Exclusivo</span>
+          <h2 class="section-title">Creada para pantallas AMOLED</h2>
+          <p class="section-lead">
+            Una interfaz oscura profunda con negros puros que protege tu visión nocturna y maximiza la duración de batería de tu smartphone.
+          </p>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Mockup 1: Pantalla Principal y Widgets -->
+          <div class="mockup-card glass-panel">
+            <div class="phone-frame">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen">
+                <img src="Screenshot_20260908_193459_LunarPin.jpg" alt="Captura de pantalla de Lunar Pin mostrando fase lunar y widgets Glance" class="app-screenshot" loading="lazy">
+              </div>
+            </div>
+            <div class="mockup-caption">
+              <h3>Widgets Jetpack Glance</h3>
+              <p>Visualiza el estado lunar sin necesidad de desbloquear o navegar. Actualización automática eficiente en segundo plano.</p>
+            </div>
+          </div>
+
+          <!-- Mockup 2: Calendario y Signo Lunar -->
+          <div class="mockup-card glass-panel">
+            <div class="phone-frame">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen">
+                <img src="Screenshot_20260908_202615_LunarPin.jpg" alt="Captura de pantalla de Lunar Pin con calendario astronómico y eventos celestes" class="app-screenshot" loading="lazy">
+              </div>
+            </div>
+            <div class="mockup-caption">
+              <h3>Calendario & Signos Celestes</h3>
+              <p>Proyecta lunas llenas, lunas nuevas y el tránsito de constelaciones con nuestro motor astronómico de alta precisión.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Características -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="subheading">Ingeniería & Astronomía</span>
+          <h2 class="section-title">Tres pilares inquebrantables</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card glass-panel">
+            <div class="feature-icon">🛰️</div>
+            <h3>Cálculo Matemático Local</h3>
+            <p>Algoritmo sinódico autónomo de 29.53 días. No depende de servidores caídos ni APIs meteorológicas lentas: funciona siempre, incluso en medio del océano o en la montaña.</p>
+          </div>
+
+          <div class="feature-card glass-panel">
+            <div class="feature-icon">🛡️</div>
+            <h3>100% Privada y Offline</h3>
+            <p>Cero recolección de datos personales, cero identificadores de publicidad, cero analíticas de terceros. Toda tu información reside exclusivamente en tu dispositivo.</p>
+          </div>
+
+          <div class="feature-card glass-panel">
+            <div class="feature-icon">⚡</div>
+            <h3>Rendimiento y Batería</h3>
+            <p>Construida en Kotlin nativo para Android y código web vanilla ultra ligero. Sin consumo vampiro de memoria ni servicios innecesarios en segundo plano.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner de llamada a la acción final -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-box glass-panel">
+          <h2>Sincronízate con la Luna hoy</h2>
+          <p>Instala Lunar Pin en tu dispositivo Android y contempla la danza lunar en tu mano.</p>
+          <div class="cta-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.zenlabdigital.lunarpin" target="_blank" rel="noopener noreferrer" class="btn btn-google-play">
+              <span class="btn-headline">Obtener en Google Play</span>
+            </a>
+            <a href="privacy.html" class="btn btn-outline">Leer Política de Privacidad</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="brand-moon-icon">🌕</span>
+          <span>Lunar Pin</span>
+        </div>
+        <p class="footer-desc">Desarrollado con pasión astronómica por <strong>Zenlab Digital</strong>.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#hero">Fase Lunar Hoy</a></li>
+            <li><a href="#showcase">Capturas de la App</a></li>
+            <li><a href="#features">Características</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Contacto</h4>
+          <ul>
+            <li><a href="privacy.html">Política de Privacidad</a></li>
+            <li><a href="mailto:gerencia@zenlabdigital.com">gerencia@zenlabdigital.com</a></li>
+            <li><span class="pkg-id">com.zenlabdigital.lunarpin</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Zenlab Digital. Todos los derechos reservados.</p>
+        <p>Aplicación móvil y sitio web diseñados con privacidad por diseño.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

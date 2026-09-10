@@ -1,0 +1,31 @@
+# Este repo es SOLO el sitio web público (GitHub Pages).
+# El vault de gestión interna (Bitacora/, Modulos/, decisiones-tecnicas.md, scope.md,
+# estado.md, historial.md, .obsidian/, docs/specs/, LunarPin.md, Metricas.md, etc.)
+# se queda fuera a propósito — sigue viviendo solo en OneDrive, compartido con el equipo,
+# y nunca debe llegar a este repositorio público.
+#
+# Estrategia: negar todo por defecto y solo permitir explícitamente lo que sí es
+# parte del sitio. Es más seguro que ignorar archivo por archivo, porque un archivo
+# nuevo del vault queda excluido automáticamente sin tener que acordarse de añadirlo aquí.
+*
+!.gitignore
+
+!/index.html
+!/privacy.html
+!/Screenshot_20260908_193459_LunarPin.jpg
+!/Screenshot_20260908_202615_LunarPin.jpg
+
+!/css/
+!/css/**
+
+!/js/
+!/js/**
+
+!/tests/
+!/tests/**
+
+!/docs/
+!/docs/deployment-guide.md
+
+!/app-debug/
+!/app-debug/app-debug.apk
