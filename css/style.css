@@ -1262,6 +1262,14 @@ a {
   border-radius: var(--radius-sm);
 }
 
+.permission-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
 .permission-scope {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -1280,6 +1288,19 @@ a {
   border-left: 2px solid var(--glow-purple);
   padding-left: 0.75rem;
   margin-top: 0.5rem !important;
+}
+
+.permission-technical-id {
+  font-size: 0.72rem !important;
+  color: var(--text-muted) !important;
+  margin: 0.75rem 0 0 !important;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.permission-technical-id code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--text-muted);
 }
 
 /* Tarjeta de Contacto */
