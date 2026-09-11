@@ -841,6 +841,60 @@ a {
 }
 
 /* ==========================================================================
+   MARCA ZENLAB — SOLO EN EL FOOTER
+   Manual de marca: el magenta de la flor de la vida es el único acento de
+   color (máximo un acento por composición); tipografía Space Grotesk.
+   No se aplica al resto del sitio (que conserva su propia identidad OLED).
+   ========================================================================== */
+.zenlab-brand {
+  --zenlab-accent: #C41E7F;
+}
+
+.zenlab-brand .footer-col a:hover {
+  color: var(--zenlab-accent);
+}
+
+.zenlab-brand-link {
+  color: inherit;
+  font-family: 'Space Grotesk', var(--font-heading);
+  transition: color var(--transition-fast);
+}
+
+.zenlab-brand-link:hover,
+.zenlab-brand-link:focus-visible {
+  color: var(--zenlab-accent);
+}
+
+.zenlab-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-family: 'Space Grotesk', var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.zenlab-badge:hover,
+.zenlab-badge:focus-visible {
+  color: var(--zenlab-accent);
+}
+
+.zenlab-badge-mark {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.legal-page-footer .zenlab-badge {
+  justify-content: center;
+  margin: 1rem auto 0;
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN (375px a 1440px+)
    ========================================================================== */
 
