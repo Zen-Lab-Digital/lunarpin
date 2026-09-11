@@ -50,9 +50,9 @@
     <div class="container legal-container">
       <!-- Encabezado del Documento -->
       <section class="legal-header-card">
-        <div class="legal-badge">Google Play & App Store Compliance</div>
+        <div class="legal-badge">Cumple con Google Play y App Store</div>
         <h1 class="legal-title">Política de Privacidad</h1>
-        <p class="legal-subtitle">Transparencia, auditoría técnica y compromiso de privacidad para la aplicación móvil Lunar Pin.</p>
+        <p class="legal-subtitle">En palabras simples: qué datos tuyos usamos (ninguno) y para qué sirve cada permiso que pide la app.</p>
 
         <div class="legal-meta-grid">
           <div class="meta-item">
@@ -80,18 +80,18 @@
         <section class="legal-section card-highlight">
           <div class="section-icon-wrap">
             <span class="section-icon">🛡️</span>
-            <h2>1. Compromiso Fundamental: Cero Recopilación de Datos Personales (Zero PII)</h2>
+            <h2>1. No recopilamos tus datos personales</h2>
           </div>
           <p>
-            En <strong>Zenlab Digital</strong> consideramos que la privacidad es un derecho humano inalienable y un principio fundamental de ingeniería de software. Para la aplicación <strong>Lunar Pin</strong> (identificada bajo el identificador de paquete oficial <code>com.zenlabdigital.lunarpin</code>), hemos adoptado una política estricta de <strong>cero recopilación de datos de identificación personal (Zero PII / Personally Identifiable Information)</strong>.
+            En <strong>Zenlab Digital</strong> creemos que tu privacidad es tuya, punto. <strong>Lunar Pin</strong> (<code>com.zenlabdigital.lunarpin</code>) no recopilamos tus datos personales de ninguna forma: no sabemos quién eres, no necesitamos saberlo, y así seguirá siendo.
           </p>
           <div class="privacy-callout">
-            <p><strong>Declaración inequívoca:</strong></p>
+            <p><strong>En corto, esto es lo que NO hacemos:</strong></p>
             <ul>
-              <li><strong>No solicitamos, ni recolectamos, ni almacenamos</strong> su nombre, correo electrónico, número de teléfono, dirección física ni identificación de dispositivo.</li>
-              <li><strong>No utilizamos</strong> identificadores de publicidad (Google Advertising ID / GAID), trackers biométricos ni huellas digitales de hardware (device fingerprinting).</li>
-              <li><strong>No incorporamos</strong> SDKs de terceros para telemetría, publicidad programática o analíticas intrusivas (sin Google Analytics, Firebase Analytics, Meta SDK ni trackers afines).</li>
-              <li><strong>No compartimos, cedemos ni vendemos</strong> ningún tipo de información a terceros, anunciantes o corredores de datos.</li>
+              <li><strong>No te pedimos</strong> tu nombre, correo, teléfono, dirección ni nada que te identifique.</li>
+              <li><strong>No usamos</strong> identificadores de publicidad ni ninguna forma de "huella digital" de tu celular para reconocerte.</li>
+              <li><strong>No metemos</strong> herramientas de terceros que te rastreen (nada de Google Analytics, Meta ni parecidos).</li>
+              <li><strong>No compartimos ni vendemos</strong> información tuya a nadie, nunca.</li>
             </ul>
           </div>
         </section>
@@ -100,15 +100,15 @@
         <section class="legal-section">
           <div class="section-icon-wrap">
             <span class="section-icon">🪐</span>
-            <h2>2. Arquitectura 100% Offline y Almacenamiento Local</h2>
+            <h2>2. Todo pasa en tu teléfono, sin internet</h2>
           </div>
           <p>
-            Lunar Pin fue diseñada desde sus cimientos como una herramienta astronómica de funcionamiento autónomo e independiente de la nube:
+            Lunar Pin funciona 100% local: no depende de servidores ni de conexión a internet para hacer su trabajo.
           </p>
           <ul>
-            <li><strong>Cálculo astronómico en el dispositivo:</strong> Los algoritmos matemáticos de posición lunar, fase, edad y coordenadas eclípticas se computan en tiempo real dentro del procesador de su teléfono mediante código local optimizado.</li>
-            <li><strong>Base de datos local segura:</strong> Las preferencias de usuario (configuración de alertas, selecciones de vista y favoritos) se conservan estrictamente dentro del espacio de almacenamiento aislado de la aplicación en el dispositivo del usuario, mediante Android Room / SQLite (<code>LunarDatabase</code>). Estos datos nunca son transmitidos a través de internet.</li>
-            <li><strong>Operación sin cuenta:</strong> La aplicación no requiere registro, inicio de sesión ni creación de perfiles. Funciona de manera completa e inmediata desde su instalación sin necesidad de credenciales.</li>
+            <li><strong>Los cálculos de la luna se hacen en tu celular:</strong> la fase lunar, la edad y demás datos astronómicos se calculan localmente, ahí mismo en tu dispositivo, no en la nube.</li>
+            <li><strong>Tus preferencias se guardan solo en tu celular:</strong> tus alarmas y ajustes quedan guardados en el almacenamiento propio de la app en tu teléfono. Esa información nunca sale de tu dispositivo ni viaja por internet.</li>
+            <li><strong>No necesitas crear una cuenta:</strong> no hay registro, ni inicio de sesión, ni perfiles. Instalas la app y la usas de una vez.</li>
           </ul>
         </section>
 
@@ -116,10 +116,10 @@
         <section class="legal-section">
           <div class="section-icon-wrap">
             <span class="section-icon">🔍</span>
-            <h2>3. Desglose Técnico y Justificación de Permisos del APK</h2>
+            <h2>3. Por qué la app pide ciertos permisos</h2>
           </div>
           <p>
-            En cumplimiento riguroso con la Política de Datos del Usuario (User Data Policy) de Google Play Developer Console, a continuación se desglosan explícitamente todos y cada uno de los permisos técnicos declarados en el manifiesto oficial del binario de la aplicación (<code>app-debug/AndroidManifest.xml</code>):
+            Cuando instalas Lunar Pin, Android te pide autorizar algunos permisos. Aquí te explicamos, en simple, para qué sirve cada uno — sin letra chiquita:
           </p>
 
           <div class="permissions-list">
@@ -127,15 +127,15 @@
             <div class="permission-item">
               <div class="permission-header">
                 <span class="permission-pill">android.permission.POST_NOTIFICATIONS</span>
-                <span class="permission-scope">Notificaciones Locales (Android 13+)</span>
+                <span class="permission-scope">Notificaciones</span>
               </div>
               <div class="permission-body">
-                <p><strong>Propósito técnico y funcional:</strong></p>
+                <p><strong>¿Para qué es?</strong></p>
                 <p>
-                  Permite a la aplicación enviar <strong>notificaciones y alertas locales</strong> que el propio usuario haya programado libremente para recordar fases lunares clave (Luna Nueva, Cuarto Creciente, Luna Llena, Cuarto Menguante) o eventos astronómicos particulares.
+                  Para avisarte con una notificación cuando llega una fase lunar que tú programaste (Luna Nueva, Cuarto Creciente, Luna Llena, etc.). Si nunca configuras un aviso, este permiso simplemente no se usa.
                 </p>
                 <p class="permission-safeguard">
-                  <em>Garantía de privacidad:</em> Estas notificaciones son emitidas de forma autónoma por el sistema operativo local mediante el gestor de alarmas de Android. No intervienen servidores remotos de mensajería push (como FCM o OneSignal) ni se transmiten datos hacia el exterior.
+                  <em>Tu privacidad:</em> el aviso lo genera tu propio celular. No pasa por ningún servidor externo ni se envía nada a internet.
                 </p>
               </div>
             </div>
@@ -144,15 +144,15 @@
             <div class="permission-item">
               <div class="permission-header">
                 <span class="permission-pill">android.permission.RECEIVE_BOOT_COMPLETED</span>
-                <span class="permission-scope">Arranque del Sistema</span>
+                <span class="permission-scope">Al reiniciar tu celular</span>
               </div>
               <div class="permission-body">
-                <p><strong>Propósito técnico y funcional:</strong></p>
+                <p><strong>¿Para qué es?</strong></p>
                 <p>
-                  Permite al receptor de difusión del sistema (<code>system.BootReceiver</code>) recibir el evento de encendido o reinicio completado del dispositivo móvil. Este evento se utiliza exclusivamente para <strong>reprogramar y restablecer las alarmas locales</strong> de eventos lunares previamente configuradas por el usuario, evitando que se pierdan tras apagar o reiniciar el teléfono.
+                  Para que tus alarmas de fases lunares sigan funcionando después de apagar y encender el celular. Sin este permiso, tendrías que volver a programarlas cada vez que reinicias el teléfono.
                 </p>
                 <p class="permission-safeguard">
-                  <em>Garantía de privacidad:</em> La rutina se ejecuta en milisegundos de forma puramente interna y no lee datos del dispositivo ni efectúa conexiones de red.
+                  <em>Tu privacidad:</em> esto solo reprograma tus alarmas locales, no revisa ni envía nada de tu celular.
                 </p>
               </div>
             </div>
@@ -161,15 +161,15 @@
             <div class="permission-item">
               <div class="permission-header">
                 <span class="permission-pill">android.permission.WAKE_LOCK</span>
-                <span class="permission-scope">Gestión de Energía Temporal</span>
+                <span class="permission-scope">Un instante de energía</span>
               </div>
               <div class="permission-body">
-                <p><strong>Propósito técnico y funcional:</strong></p>
+                <p><strong>¿Para qué es?</strong></p>
                 <p>
-                  Permite mantener brevemente despierta la CPU durante fracciones de segundo para garantizar la <strong>actualización precisa del reloj astronómico en segundo plano</strong> cuando vence una alarma programada o al transicionar de fase lunar.
+                  Para mantener el celular despierto una fracción de segundo y así actualizar el reloj astronómico (la fase lunar) en segundo plano justo a tiempo, sin retrasos.
                 </p>
                 <p class="permission-safeguard">
-                  <em>Garantía de privacidad:</em> El bloqueo de suspensión se libera de forma inmediata una vez finalizado el cálculo local de posición lunar, preservando al máximo la batería y sin procesar datos personales.
+                  <em>Tu privacidad:</em> dura milisegundos y no procesa ningún dato personal — solo hace el cálculo de la luna.
                 </p>
               </div>
             </div>
@@ -178,15 +178,15 @@
             <div class="permission-item">
               <div class="permission-header">
                 <span class="permission-pill">android.permission.FOREGROUND_SERVICE</span>
-                <span class="permission-scope">Servicio de Primer Plano</span>
+                <span class="permission-scope">El widget de tu pantalla de inicio</span>
               </div>
               <div class="permission-body">
-                <p><strong>Propósito técnico y funcional:</strong></p>
+                <p><strong>¿Para qué es?</strong></p>
                 <p>
-                  Requerido por las directivas modernas de Android para respaldar el ciclo de vida y renderizado fluido del <strong>widget de pantalla de inicio</strong> (Home Screen Widget) implementado mediante Jetpack Glance (<code>widget.LunarWidgetReceiver</code>).
+                  Es lo que exige Android para que el widget que pusiste en tu pantalla de inicio pueda mostrarte la fase lunar y mantenerse actualizado.
                 </p>
                 <p class="permission-safeguard">
-                  <em>Garantía de privacidad:</em> Se utiliza exclusivamente para pintar visualmente la fase lunar actual en el escritorio del usuario, sin transferir información fuera del dispositivo ni operar servicios invisibles.
+                  <em>Tu privacidad:</em> solo dibuja la fase lunar en tu pantalla — no manda información a ningún lado ni corre nada oculto.
                 </p>
               </div>
             </div>
@@ -197,15 +197,15 @@
         <section class="legal-section">
           <div class="section-icon-wrap">
             <span class="section-icon">🌐</span>
-            <h2>4. Privacidad en el Sitio Web Oficial</h2>
+            <h2>4. Este sitio web también respeta tu privacidad</h2>
           </div>
           <p>
-            El presente sitio web informativo (alojado mediante infraestructura estática en GitHub Pages) se adhiere a los mismos principios de austeridad y respeto:
+            Esta página (la que estás viendo ahora) sigue las mismas reglas simples:
           </p>
           <ul>
-            <li><strong>Cero Cookies de Rastreo:</strong> No empleamos cookies para rastreo publicitario, marketing de afiliación ni elaboración de perfiles de navegación.</li>
-            <li><strong>Hosting Estático:</strong> Los archivos HTML, CSS y JS se sirven como contenido estático puro. Los registros de servidor estándar generados por GitHub se limitan a métricas técnicas de infraestructura y transferencia de datos bajo las políticas de GitHub.</li>
-            <li><strong>Enlaces Salientes:</strong> Los enlaces hacia tiendas oficiales como Google Play Store se rigen por los términos y condiciones respectivos de cada plataforma.</li>
+            <li><strong>Sin cookies de rastreo:</strong> no usamos cookies para publicidad ni para seguirte por internet.</li>
+            <li><strong>Es solo un sitio estático:</strong> son archivos simples (HTML, CSS, JS) alojados en GitHub Pages, sin base de datos ni servidor propio detrás.</li>
+            <li><strong>Enlaces a Google Play:</strong> si haces clic para ir a Google Play, ahí aplican las reglas de privacidad de Google, no las nuestras.</li>
           </ul>
         </section>
 
@@ -213,10 +213,10 @@
         <section class="legal-section">
           <div class="section-icon-wrap">
             <span class="section-icon">🌱</span>
-            <h2>5. Protección de la Privacidad de Menores</h2>
+            <h2>5. Apta para todas las edades</h2>
           </div>
           <p>
-            Lunar Pin es una herramienta de divulgación astronómica apta para todos los públicos. Dado que la aplicación no recopila ninguna clase de datos de identificación personal (PII), cumple de forma inherente con las disposiciones de la Ley de Protección de la Privacidad Infantil en Internet (COPPA) de los Estados Unidos y el Reglamento General de Protección de Datos (RGPD) de la Unión Europea. No recolectamos información de menores de 13 años ni de ninguna otra franja de edad.
+            Lunar Pin es una app de astronomía que puede usar cualquier persona, incluyendo niños. Como no recopilamos datos personales de nadie, esto también cumple con las leyes que protegen a los menores en internet (como COPPA en Estados Unidos y el RGPD en Europa). No pedimos ni guardamos información de menores de 13 años, ni de nadie más.
           </p>
         </section>
 
@@ -224,14 +224,14 @@
         <section class="legal-section">
           <div class="section-icon-wrap">
             <span class="section-icon">🗑️</span>
-            <h2>6. Control del Usuario y Eliminación de Datos</h2>
+            <h2>6. Tú tienes el control total</h2>
           </div>
           <p>
-            Al no existir servidores centrales ni bases de datos remotas donde residan sus datos, usted tiene el control físico absoluto de toda su información en cualquier instante:
+            Como no guardamos nada en servidores, todo lo que la app guarda vive únicamente en tu celular — y tú decides qué hacer con eso:
           </p>
           <ul>
-            <li>Para eliminar cualquier preferencia o alarma local almacenada en su teléfono, puede borrar los datos de almacenamiento de la aplicación desde la sección <em>Ajustes > Aplicaciones > Lunar Pin > Almacenamiento > Borrar Datos</em> de su sistema operativo Android.</li>
-            <li>La desinstalación de la aplicación elimina de manera automática e irreversible todas las bases de datos locales creadas por la app en su dispositivo.</li>
+            <li>Para borrar tus alarmas y ajustes guardados, ve a <em>Ajustes > Aplicaciones > Lunar Pin > Almacenamiento > Borrar Datos</em> en tu Android.</li>
+            <li>Si desinstalas la app, todo lo que guardó en tu celular se borra automáticamente y no se puede recuperar.</li>
           </ul>
         </section>
 
@@ -239,10 +239,10 @@
         <section class="legal-section">
           <div class="section-icon-wrap">
             <span class="section-icon">📜</span>
-            <h2>7. Modificaciones a la Presente Política</h2>
+            <h2>7. Si algo cambia aquí, te lo decimos</h2>
           </div>
           <p>
-            Podemos actualizar nuestra Política de Privacidad periódicamente para reflejar mejoras operativas o adaptaciones a nuevas normativas regulatorias de las tiendas de aplicaciones. Cualquier cambio entrará en vigencia inmediatamente tras su publicación en esta página, acompañada de la correspondiente actualización de la fecha de revisión en la parte superior del documento.
+            Si en algún momento actualizamos esta Política de Privacidad, el cambio se publica directamente en esta misma página, con la fecha actualizada arriba. Así siempre puedes ver la versión vigente.
           </p>
         </section>
 
@@ -250,15 +250,15 @@
         <section class="legal-section legal-contact-card">
           <div class="section-icon-wrap">
             <span class="section-icon">✉️</span>
-            <h2>8. Contacto y Consultas de Privacidad</h2>
+            <h2>8. ¿Dudas? Escríbenos</h2>
           </div>
           <p>
-            Si tiene alguna duda, inquietud o sugerencia relativa a esta Política de Privacidad o a las prácticas de seguridad de Lunar Pin, puede comunicarse de manera directa con nuestro equipo de desarrollo:
+            Si tienes alguna pregunta sobre esta Política de Privacidad o sobre Lunar Pin en general, escríbenos directamente:
           </p>
           <div class="contact-details">
-            <p><strong>Entidad Responsable:</strong> Zenlab Digital</p>
-            <p><strong>Correo electrónico oficial:</strong> <a href="mailto:zenlabdigital@gmail.com" class="contact-email">zenlabdigital@gmail.com</a></p>
-            <p><strong>Sitio Web Oficial:</strong> <a href="index.html" class="contact-web">https://zen-lab-digital.github.io/lunarpin/</a></p>
+            <p><strong>Responsable:</strong> Zenlab Digital</p>
+            <p><strong>Correo:</strong> <a href="mailto:zenlabdigital@gmail.com" class="contact-email">zenlabdigital@gmail.com</a></p>
+            <p><strong>Sitio web:</strong> <a href="index.html" class="contact-web">https://zen-lab-digital.github.io/lunarpin/</a></p>
           </div>
         </section>
       </article>
